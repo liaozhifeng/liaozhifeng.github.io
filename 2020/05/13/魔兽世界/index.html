@@ -119,7 +119,7 @@
 <meta property="og:description" content="这个题目，我花了差不多4天才全部做出来的，一开始也没很好的设计，就是看见有什么功能，就写一个函数的声明，然后写另一个类的时候，发现我要用到前面写的类的函数时，才去定义相应的函数，所以可能会很混乱。我写这篇文章一是为了重新理一下思路，也希望能给后面设计的人一个想法吧。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-12T17:18:05.000Z">
-<meta property="article:modified_time" content="2020-05-16T09:39:22.708Z">
+<meta property="article:modified_time" content="2020-07-21T13:38:02.638Z">
 <meta property="article:author" content="廖志锋">
 <meta name="twitter:card" content="summary">
 
@@ -403,8 +403,7 @@
 <p>武器的攻击力会随使用者的改变而发生改变，<strong>所以在抢夺武器时记得要给一个接口去改变武器的攻击力</strong></p>
 <p>Wolf的抢夺武器与打赢后抢夺武器是不一样的，wolf只抢劫一种（编号最小的武器），而打赢之后进行的抢劫，所有的武器都能抢。</p>
 <p>关于删除武器，武士的erase，erase最好写一个函数，参数传递要删除的对应指针（容器里面放的是指针嘛），erase的参数都是迭代器，推荐使用for循环找到要删除指针对应的迭代器。</p>
-<p> 注意iceman前进一步损失10%的生命值，表示的方式是$life-life<em>10%$,而不是$life</em>90%$!!!</p>
-<p>移动的输出顺序是按目的地从西向东的，我的做法是先全部移动，再按city输出相应的信息</p>
+<p> 注意iceman前进一步损失10%的生命值，表示的方式是<br>$$<br>life-life<em>10%<br>$$<br>,而不是<br>$$<br>life</em>90%<br>$$<br>移动的输出顺序是按目的地从西向东的，我的做法是先全部移动，再按city输出相应的信息</p>
 <p>如果武士用一个数组去存储武器的数量，另外还有如果wolf抢劫了敌人的武器记得把敌人数组的数量减掉，武士的数组加相应的值。</p>
 <p>还有一个非常坑的点，在打架时，假如两个都剩余一件sword的攻击力为0，或者有一个没有武器，都会进行入死循环。但是其他两种武器是有使用次数的就每关系。</p>
 <p>耳聋咆哮是活下来就要的，不是赢了才。</p>
@@ -514,7 +513,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
