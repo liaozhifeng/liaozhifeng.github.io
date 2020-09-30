@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-17T08:50:07.103Z</updated>
+  <updated>2020-09-30T12:05:38.070Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>some puzzles in these day</title>
+    <link href="http://yoursite.com/2020/09/30/some-puzzles-in-these-day/"/>
+    <id>http://yoursite.com/2020/09/30/some-puzzles-in-these-day/</id>
+    <published>2020-09-30T12:04:57.000Z</published>
+    <updated>2020-09-30T12:05:38.070Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="杂项" scheme="http://yoursite.com/tags/%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>一些想法</title>
