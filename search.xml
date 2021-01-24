@@ -48,7 +48,7 @@
 <li><p>简单图：既无平行边也无环的图称为简单图。其中平行边的条数称为重数。</p></li>
 <li><p>完全图和正则图：无向完全图，记作<span class="math inline">\(K_n\)</span>，边数为<span class="math inline">\(n(n-1)/2\)</span>，有向完全图，边数为<span class="math inline">\(n(n-1)\)</span>；<span class="math inline">\(k-\)</span>正则图：每个顶点的度数均为<span class="math inline">\(k\)</span>的无向简单图。</p></li>
 <li><p>子图：生成子图：<span class="math inline">\(V&#39; = V\)</span>且<span class="math inline">\(G&#39;\subseteq G\)</span>；<span class="math inline">\(V&#39;\)</span>的导出子图，以两端点都在<span class="math inline">\(V&#39;\)</span>中所有的边集的子图，记作<span class="math inline">\(G[V&#39;]\)</span>；<span class="math inline">\(E&#39;\)</span>的导出子图：以<span class="math inline">\(E&#39;\)</span>所以关联的顶点为顶点集的子图，记作<span class="math inline">\(G[E&#39;]\)</span>。</p></li>
-<li><p>通路：<span class="math inline">\(Γ = v_0e_1v_1e_2...e_lv_l\)</span> ，称$Γ <span class="math inline">\(为\)</span>v_0<span class="math inline">\(到\)</span>v_l<span class="math inline">\(的通路，\)</span>l<span class="math inline">\(为通路的长度，若\)</span>v_0=v_l<span class="math inline">\(则称\)</span>Γ <span class="math inline">\(为回路。若通路（回路）中所有顶点（对于回路，\)</span>v_0=v_l$）各异，称此通路<strong>初级通路（回路）</strong>；若通路中所有的边各异，则称为简单通路。初级通路是简单通路，反之不然。</p></li>
+<li><p>通路：<span class="math inline">\(Γ = v_0e_1v_1e_2...e_lv_l\)</span> ，称<span class="math inline">\(Γ\)</span>为<span class="math inline">\(v_0\)</span>到<span class="math inline">\(v_l\)</span>的通路，<span class="math inline">\(l\)</span>为通路的长度，若<span class="math inline">\(v_0=v_l\)</span>则称$Γ <span class="math inline">\(为回路。若通路（回路）中所有顶点（对于回路，\)</span>v_0=v_l$）各异，称此通路<strong>初级通路（回路）</strong>；若通路中所有的边各异，则称为简单通路。初级通路是简单通路，反之不然。</p></li>
 <li><p><span class="math inline">\(Γ\)</span>的表示方法 ：用顶点和边交替序列、用边序列、简单图中用顶点序列。</p></li>
 <li><p>连通分支：设<span class="math inline">\(R\)</span>是<span class="math inline">\(G\)</span>中顶点之间的连通关系，按<span class="math inline">\(R\)</span>可将<span class="math inline">\(V(G)\)</span>划分为<span class="math inline">\(k\)</span>个等价类，记作<span class="math inline">\(V_1,V_2,...,V_k\)</span>，由他们的导出子图<span class="math inline">\(G[V_1],G[V_2],...,G[V_k]\)</span>称为<span class="math inline">\(G\)</span>的连通分支。令<span class="math inline">\(p(G)=k\)</span>表示<span class="math inline">\(G\)</span>的连通分支数为<span class="math inline">\(k\)</span>。</p></li>
 <li><p>点割集与边割集：若<span class="math inline">\(V&#39; \subset V\)</span>，<span class="math inline">\(p(V-V&#39;)&gt;p(V)\)</span>，且<span class="math inline">\(\forall V&#39;&#39; \subset V\)</span>，<span class="math inline">\(p(V-V&#39;&#39;) = V\)</span>，则称<span class="math inline">\(V&#39;\)</span>为<span class="math inline">\(G\)</span>的点割集，若点割集只有一个点，则称此顶点为割点；同理可以得到边割集的定义，若边割集只有一条边则称此边为割边或桥。</p></li>
@@ -150,5 +150,14 @@
       <categories>
         <category>技术</category>
       </categories>
+  </entry>
+  <entry>
+    <title>2020总结</title>
+    <url>/2021/01/24/2020%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>这段时间一直在复习考试复习考试，就没什么时间好好想一下这一年发生了什么事 。虽然一切都是按部就班，但还是有一些小事情要记录下的</p>
+]]></content>
+      <tags>
+        <tag>杂想</tag>
+      </tags>
   </entry>
 </search>
