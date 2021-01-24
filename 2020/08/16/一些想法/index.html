@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.3.0">
-
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -15,15 +13,14 @@
 <link rel="stylesheet" href="/css/main.css">
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="hexo-configurations">
+<script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"liaozhifeng.gitee.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":true,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"liaozhifeng.gitee.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-<meta name="description" content="其实一直都想写些什么，表达一下我的一些想法，但又总是被各种各样的事情耽搁了，想法也就断了，不知道从何开始表诉。昨天晚上看cba总决赛，看到阿联受伤了，今天大概是确认跟腱撕裂了，我想我还是有必要来写点东西吧。">
+
+  <meta name="description" content="其实一直都想写些什么，表达一下我的一些想法，但又总是被各种各样的事情耽搁了，想法也就断了，不知道从何开始表诉。昨天晚上看cba总决赛，看到阿联受伤了，今天大概是确认跟腱撕裂了，我想我还是有必要来写点东西吧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一些想法">
 <meta property="og:url" content="http://liaozhifeng.gitee.io/2020/08/16/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/index.html">
@@ -35,11 +32,10 @@
 <meta property="article:author" content="xinyu">
 <meta name="twitter:card" content="summary">
 
-
 <link rel="canonical" href="http://liaozhifeng.gitee.io/2020/08/16/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
 
 
-<script data-pjax class="page-configurations">
+<script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
@@ -48,70 +44,61 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>一些想法 | xinyu</title>
+
+  <title>一些想法 | xinyu</title>
   
+
+
 
 
 
 
   <noscript>
   <style>
-  body { margin-top: 2rem; }
-
+  .use-motion .brand,
   .use-motion .menu-item,
-  .use-motion .sidebar,
+  .sidebar-inner,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
+  .use-motion .site-subtitle {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="xinyu" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
+      <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">xinyu</h1>
-      <i class="logo-line"></i>
+      <span class="logo-line-after"><i></i></span>
     </a>
   </div>
 
@@ -124,11 +111,24 @@
 
 
 
+
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -139,22 +139,23 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
+    <div class="popup search-popup">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close" role="button">
+  <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
 
@@ -162,18 +163,191 @@
   </div>
 
 </div>
-        
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://liaozhifeng.gitee.io/2020/08/16/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xinyu">
+      <meta itemprop="description" content="喜欢瞎折腾的白日梦想家">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xinyu">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一些想法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-16 20:47:45" itemprop="dateCreated datePublished" datetime="2020-08-16T20:47:45+08:00">2020-08-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-17 16:50:07" itemprop="dateModified" datetime="2020-08-17T16:50:07+08:00">2020-08-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E6%83%B3/" itemprop="url" rel="index"><span itemprop="name">杂想</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/16/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/16/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>其实一直都想写些什么，表达一下我的一些想法，但又总是被各种各样的事情耽搁了，想法也就断了，不知道从何开始表诉。昨天晚上看cba总决赛，看到阿联受伤了，今天大概是确认跟腱撕裂了，我想我还是有必要来写点东西吧。</p>
+<a id="more"></a>
+<p>跟腱撕裂对一个篮球运动员来说无疑是噩梦，这意味着即使能够完全恢复，你的爆发力，弹跳能力也会大不如前。看到阿联倒下去，摸着跟腱，其实或多或少已经猜到了结局，阿联也该卸下他的担子，让下一代人前行了。记得里约奥运会，男篮小组赛被淘汰出局时，记得记者与阿联聊的是19年的世界杯，东京的奥运会，记者想表达的是中国男篮有光明的未来，可阿联说的是都以为未来很长，其实一晃就过去了。确实，世界杯的离奇出局，奥运会也无法入选，中国男篮与其他国家的差距好像也越来越远了。总是想着有以后不去努力，其实时间真的走的飞快，就好像总想着有明天，然后明天继续拖，一晃可能重要的事情就过去了。</p>
+<p>感觉男生可能很多都很喜欢看比赛，那种比赛带来的激情总能让我也心潮澎湃。我从08年就有开始看中国男篮了，那时候阿联还是一年轻小伙，没想到都过去了12年了，我也算开开心心地走过了这10多年，快来到多年前幻想的年纪了。以前遇到不开心的事时，都会在想以后工作了，有新的生活了，然后就很激动。到了现在，对工作的期待也不像之前那么猛烈，大概我最根本的想法是逃离现状，期待以后有更好的生活吧。</p>
+<p>从小我就因为牙齿，被别人嘲笑挺多的，所以现在我好像对很多事情渐渐没了想法。其实我是一个很有表现欲的人，但很多时候想到自己的牙齿就会压制住内心的想法，本来可以更好却无法更好，有时候也是会很不开心的。然后呢，我从小好像也没有什么叛逆的想法，好像一直是一个认真学习的好学生，没有做过什么特殊的事情，按部就班的小学，初中，高中，大学，只是想要考的学校一个接一个的都考不上。小时候总以为我有超能力，可以控制下雨，控制车辆的行走，只不过后来的求学生涯，让我渐渐的认识到我只是一个很很很普通的人罢了。以为我在写作文很强，结果每一次都是40多一点，没有什么思想深度，自然写不出好文章的；高中时拼命的做题，成绩也一直很一般，可能是方法不对吧，也可能自己的能力就那样，幸好努力好像也算一种天赋，我才能勉强勉强不那么普通。</p>
+<p>高二时，能因为一个自我安慰的理由拼命的学习，现在想想虽然有些好笑，但是我也找不回当时的激情了，有什么值得拼命的东西真好，希望大家都能拥有想守护一生的人。高三就过的平平常常，想说的话可能没机会说出口了，有些人真的是不知不觉已经见过了最后一面了。其实好像也没什么特别的事好说吧，所以写的挺乱的，如果有人看到，希望我的情绪不要影响你们。定几个以后的目标吧：</p>
+<ul>
+<li>对身边的人好一点，别老发脾气</li>
+<li>改掉拖延症，勇敢一点</li>
+<li>不卑不亢，自己其实已经很好了</li>
+<li>每天开心，努力</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/20/%E5%A4%A7%E4%B8%80%E6%80%BB%E7%BB%93%E4%BB%A5%E5%8F%8A%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92/" rel="prev" title="大一总结以及未来的规划">
+      <i class="fa fa-chevron-left"></i> 大一总结以及未来的规划
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/17/some-puzzles-in-these-day/" rel="next" title="最近的一些事情与想法">
+      最近的一些事情与想法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
+    <div class="sidebar-inner">
 
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
+      <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
           文章目录
         </li>
@@ -182,18 +356,17 @@
         </li>
       </ul>
 
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
-        <!--/noindex-->
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">xinyu</p>
   <div class="site-description" itemprop="description">喜欢瞎折腾的白日梦想家</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
@@ -214,254 +387,134 @@
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/liaozhifeng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;liaozhifeng" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/liaozhifeng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;liaozhifeng" rel="noopener" target="_blank"><i class="fa fa-fw fa-fab fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:1528395405@qq.com" title="E-Mail → mailto:1528395405@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:1528395405@qq.com" title="E-Mail → mailto:1528395405@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-fa fa-envelope"></i>E-Mail</a>
       </span>
   </div>
 
 
 
-        </div>
       </div>
+
     </div>
   </aside>
-  <div class="sidebar-dimmer"></div>
+  <div id="sidebar-dimmer"></div>
 
 
-    </header>
-
-    
-  <div class="back-to-top" role="button">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://liaozhifeng.gitee.io/2020/08/16/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="xinyu">
-      <meta itemprop="description" content="喜欢瞎折腾的白日梦想家">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xinyu">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          一些想法
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-16 20:47:45" itemprop="dateCreated datePublished" datetime="2020-08-16T20:47:45+08:00">2020-08-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-17 16:50:07" itemprop="dateModified" datetime="2020-08-17T16:50:07+08:00">2020-08-17</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%82%E6%83%B3/" itemprop="url" rel="index"><span itemprop="name">杂想</span></a>
-        </span>
-    </span>
-
-  
       </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
+    </main>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>其实一直都想写些什么，表达一下我的一些想法，但又总是被各种各样的事情耽搁了，想法也就断了，不知道从何开始表诉。昨天晚上看cba总决赛，看到阿联受伤了，今天大概是确认跟腱撕裂了，我想我还是有必要来写点东西吧。</p>
-<a id="more"></a>
-<p>跟腱撕裂对一个篮球运动员来说无疑是噩梦，这意味着即使能够完全恢复，你的爆发力，弹跳能力也会大不如前。看到阿联倒下去，摸着跟腱，其实或多或少已经猜到了结局，阿联也该卸下他的担子，让下一代人前行了。记得里约奥运会，男篮小组赛被淘汰出局时，记得记者与阿联聊的是19年的世界杯，东京的奥运会，记者想表达的是中国男篮有光明的未来，可阿联说的是都以为未来很长，其实一晃就过去了。确实，世界杯的离奇出局，奥运会也无法入选，中国男篮与其他国家的差距好像也越来越远了。总是想着有以后不去努力，其实时间真的走的飞快，就好像总想着有明天，然后明天继续拖，一晃可能重要的事情就过去了。</p>
-<p>感觉男生可能很多都很喜欢看比赛，那种比赛带来的激情总能让我也心潮澎湃。我从08年就有开始看中国男篮了，那时候阿联还是一年轻小伙，没想到都过去了12年了，我也算开开心心地走过了这10多年，快来到多年前幻想的年纪了。以前遇到不开心的事时，都会在想以后工作了，有新的生活了，然后就很激动。到了现在，对工作的期待也不像之前那么猛烈，大概我最根本的想法是逃离现状，期待以后有更好的生活吧。</p>
-<p>从小我就因为牙齿，被别人嘲笑挺多的，所以现在我好像对很多事情渐渐没了想法。其实我是一个很有表现欲的人，但很多时候想到自己的牙齿就会压制住内心的想法，本来可以更好却无法更好，有时候也是会很不开心的。然后呢，我从小好像也没有什么叛逆的想法，好像一直是一个认真学习的好学生，没有做过什么特殊的事情，按部就班的小学，初中，高中，大学，只是想要考的学校一个接一个的都考不上。小时候总以为我有超能力，可以控制下雨，控制车辆的行走，只不过后来的求学生涯，让我渐渐的认识到我只是一个很很很普通的人罢了。以为我在写作文很强，结果每一次都是40多一点，没有什么思想深度，自然写不出好文章的；高中时拼命的做题，成绩也一直很一般，可能是方法不对吧，也可能自己的能力就那样，幸好努力好像也算一种天赋，我才能勉强勉强不那么普通。</p>
-<p>高二时，能因为一个自我安慰的理由拼命的学习，现在想想虽然有些好笑，但是我也找不回当时的激情了，有什么值得拼命的东西真好，希望大家都能拥有想守护一生的人。高三就过的平平常常，想说的话可能没机会说出口了，有些人真的是不知不觉已经见过了最后一面了。其实好像也没什么特别的事好说吧，所以写的挺乱的，如果有人看到，希望我的情绪不要影响你们。定几个以后的目标吧：</p>
-<ul>
-<li>对身边的人好一点，别老发脾气</li>
-<li>改掉拖延症，勇敢一点</li>
-<li>不卑不亢，自己其实已经很好了</li>
-<li>每天开心，努力</li>
-</ul>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2020/07/20/%E5%A4%A7%E4%B8%80%E6%80%BB%E7%BB%93%E4%BB%A5%E5%8F%8A%E6%9C%AA%E6%9D%A5%E7%9A%84%E8%A7%84%E5%88%92/" rel="prev" title="大一总结以及未来的规划">
-                  <i class="fa fa-chevron-left"></i> 大一总结以及未来的规划
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/10/17/some-puzzles-in-these-day/" rel="next" title="最近的一些事情与想法">
-                  最近的一些事情与想法 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
 <div class="copyright">
+  
   &copy; 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">xinyu</span>
-</div>
-<div class="wordcount">
-  <span class="post-meta-item">
+    <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
+      <i class="fa fa-area-chart"></i>
     </span>
     <span title="站点总字数">36k</span>
-  </span>
-  <span class="post-meta-item">
+    <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
     <span title="站点阅读时长">33 分钟</span>
-  </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
-    </div>
-  </footer>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
 
   
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
 
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
+
+
+
+  
+  <style>
+  
+  button.darkmode-toggle {
+  z-index: 9999;
   }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
+  
+  img, .darkmode-ignore {
+    isolation: isolate;
+    display: block;
+  }
+  </style>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/darkmode-js/lib/darkmode-js.min.js"></script>
+
+
+
+<script>
+var options = {
+  bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+// window.onload = function(){
+//   setTimeout(
+//     function() {
+//       document.getElementsByClassName('darkmode-toggle')[0].click();
+//     },
+//     550,
+//   );
+//   document.getElementsByClassName('darkmode-toggle')[0].click();
+// }
 </script>
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
 
 
   
@@ -472,15 +525,47 @@ document.addEventListener('pjax:success', () => {
 
 
 
+
+
+
+
+
+
+
+  
+
+  
+
   
 
 
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'bpu3rQXe1RTALAz8m2U2MFFs-gzGzoHsz',
+      appKey     : 'RbHz1FJVpWvXLeoxefs21uU5',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
-    <div class="pjax">
-
-  
-
-
-    </div>
 </body>
 </html>
