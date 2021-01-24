@@ -27,8 +27,7 @@
 <meta property="og:site_name" content="xinyu">
 <meta property="og:description" content="喜欢瞎折腾的白日梦想家">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="廖志锋">
-<meta property="article:tag" content="喜欢瞎折腾的白日梦想家">
+<meta property="article:author" content="xinyu">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://liaozhifeng.gitee.io/">
@@ -205,10 +204,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-01-22 14:32:56 / 修改时间：14:46:58" itemprop="dateCreated datePublished" datetime="2021-01-22T14:32:56+08:00">2021-01-22</time>
+              <time title="创建时间：2021-01-22 14:32:56" itemprop="dateCreated datePublished" datetime="2021-01-22T14:32:56+08:00">2021-01-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-24 12:56:56" itemprop="dateModified" datetime="2021-01-24T12:56:56+08:00">2021-01-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -239,14 +244,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.7k</span>
+              <span>5.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>5 分钟</span>
             </span>
 
         </div>
@@ -258,38 +263,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h3><ul>
-<li><p>零图：$E = ∅$，即只有顶点，没有边的图。</p>
-</li>
-<li><p>平凡图：只有一个顶点（也称$1$阶图）的零图。</p>
-</li>
-<li><p>悬挂顶点：度数为$1$的顶点；悬挂边：与悬挂顶点关联的边。</p>
-</li>
-<li><p>在无向图中，图的最大度：$∆(G)={d(v)|v\in V}$，其中$V$表示顶点集，$d(v)$表示顶点的度数，记住用$\Delta(G)$去表示最大度；同理图的最小度的定义易得，注意的是我们用$\delta(G)$表示图的最小度。另外无向图用$(v_n,v_m)$表示边。</p>
-</li>
-<li><p>在有向图中，$v$的入度$d^+(v)$，$v$的出度$d^-(v)$，$v$的度数$d(v) = d^+(v)+d^-(v)$，同时有向图还定义了出度、入度的最大度和最小度。有向图用$\langle v_n,v_m \rangle$表示边。</p>
-</li>
-<li><p>握手定理：图的所有顶点的度数之和等于边数的$2$倍，因为每条边都提供$2$度，所以度数之和一定是偶数。</p>
-</li>
-<li><p>度数列：$V=\{v_1,v_2,…v_n\}$，$G$的度数列：$d(v_1),d(v_2),…,d(v_n)$。</p>
-</li>
-<li><p>简单图：既无平行边也无环的图称为简单图。其中平行边的条数称为重数。</p>
-</li>
-<li><p>完全图和正则图：无向完全图，记作$K_n$，边数为$n(n-1)/2$，有向完全图，边数为$n(n-1)$；$k-$正则图：每个顶点的度数均为$k$的无向简单图。</p>
-</li>
-<li><p>子图：生成子图：$V’ = V$且$G’\subseteq G$；$V’$的导出子图，以两端点都在$V’$中所有的边集的子图，记作$G[V’]$；$E’$的导出子图：以$E’$所以关联的顶点为顶点集的子图，记作$G[E’]$。</p>
-</li>
-<li><p>通路：$Γ = v_0e_1v_1e_2…e_lv_l$ ，称$Γ $为$v_0$到$v_l$的通路，$l$为通路的长度，若$v_0=v_l$则称$Γ $为回路。若通路（回路）中所有顶点（对于回路，$v_0=v_l$）各异，称此通路<strong>初级通路（回路）</strong>；若通路中所有的边各异，则称为简单通路。初级通路是简单通路，反之不然。</p>
-</li>
-<li><p>$Γ$的表示方法 ：用顶点和边交替序列、用边序列、简单图中用顶点序列。</p>
-</li>
-<li><p>连通分支：设$R$是$G$中顶点之间的连通关系，按$R$可将$V(G)$划分为$k$个等价类，记作$V_1,V_2,…,V_k$，由他们的导出子图$G[V_1],G[V_2],…,G[V_k]$称为$G$的连通分支。令$p(G)=k$表示$G$的连通分支数为$k$。</p>
-</li>
-<li><p>点割集与边割集：若$V’ \subset V$，$p(V-V’)&gt;p(V)$，且$\forall V’’ \subset V$，$p(V-V’’) = V$，则称$V’$为$G$的点割集，若点割集只有一个点，则称此顶点为割点；同理可以得到边割集的定义，若边割集只有一条边则称此边为割边或桥。</p>
-</li>
-<li><p>点连通度和边连通度：记$min\{|V’| \space | V’$是$G$的点割集$\}=\kappa(G)$，称为$G$的点连通度；记$min\{|E’| \space|E’$是$G$的边割集$\} = \lambda(G)$，称为$G$的边连通度。对于任意的无向图有$\kappa(G)\leq \lambda(G)\leq \delta(G)$ 。</p>
-</li>
-<li><p>二部图判别定理：无向图$G=\langle V,E\rangle$是二部图当且仅当$G$中无奇数长度的回路，记作$\langle V_1,V_2,E\rangle$。二部图还有一个非常重要的匹配问题，匹配就是$E’ \subseteq E$，且$E’$中的边互补相邻，注意极大匹配，最大匹配，完备匹配，完美匹配等问题。</p>
+          <h3 id="图论">图论</h3>
+<ul>
+<li><p>零图：<span class="math inline">\(E = ∅\)</span>，即只有顶点，没有边的图。</p></li>
+<li><p>平凡图：只有一个顶点（也称<span class="math inline">\(1\)</span>阶图）的零图。</p></li>
+<li><p>悬挂顶点：度数为<span class="math inline">\(1\)</span>的顶点；悬挂边：与悬挂顶点关联的边。</p></li>
+<li><p>在无向图中，图的最大度：<span class="math inline">\(∆(G)={d(v)|v\in V}\)</span>，其中<span class="math inline">\(V\)</span>表示顶点集，<span class="math inline">\(d(v)\)</span>表示顶点的度数，记住用<span class="math inline">\(\Delta(G)\)</span>去表示最大度；同理图的最小度的定义易得，注意的是我们用<span class="math inline">\(\delta(G)\)</span>表示图的最小度。另外无向图用<span class="math inline">\((v_n,v_m)\)</span>表示边。</p></li>
+<li><p>在有向图中，<span class="math inline">\(v\)</span>的入度<span class="math inline">\(d^+(v)\)</span>，<span class="math inline">\(v\)</span>的出度<span class="math inline">\(d^-(v)\)</span>，<span class="math inline">\(v\)</span>的度数<span class="math inline">\(d(v) = d^+(v)+d^-(v)\)</span>，同时有向图还定义了出度、入度的最大度和最小度。有向图用<span class="math inline">\(\langle v_n,v_m \rangle\)</span>表示边。</p></li>
+<li><p>握手定理：图的所有顶点的度数之和等于边数的<span class="math inline">\(2\)</span>倍，因为每条边都提供<span class="math inline">\(2\)</span>度，所以度数之和一定是偶数。</p></li>
+<li><p>度数列：<span class="math inline">\(V=\{v_1,v_2,...v_n\}\)</span>，<span class="math inline">\(G\)</span>的度数列：<span class="math inline">\(d(v_1),d(v_2),...,d(v_n)\)</span>。</p></li>
+<li><p>简单图：既无平行边也无环的图称为简单图。其中平行边的条数称为重数。</p></li>
+<li><p>完全图和正则图：无向完全图，记作<span class="math inline">\(K_n\)</span>，边数为<span class="math inline">\(n(n-1)/2\)</span>，有向完全图，边数为<span class="math inline">\(n(n-1)\)</span>；<span class="math inline">\(k-\)</span>正则图：每个顶点的度数均为<span class="math inline">\(k\)</span>的无向简单图。</p></li>
+<li><p>子图：生成子图：<span class="math inline">\(V&#39; = V\)</span>且<span class="math inline">\(G&#39;\subseteq G\)</span>；<span class="math inline">\(V&#39;\)</span>的导出子图，以两端点都在<span class="math inline">\(V&#39;\)</span>中所有的边集的子图，记作<span class="math inline">\(G[V&#39;]\)</span>；<span class="math inline">\(E&#39;\)</span>的导出子图：以<span class="math inline">\(E&#39;\)</span>所以关联的顶点为顶点集的子图，记作<span class="math inline">\(G[E&#39;]\)</span>。</p></li>
+<li><p>通路：<span class="math inline">\(Γ = v_0e_1v_1e_2...e_lv_l\)</span> ，称$Γ <span class="math inline">\(为\)</span>v_0<span class="math inline">\(到\)</span>v_l<span class="math inline">\(的通路，\)</span>l<span class="math inline">\(为通路的长度，若\)</span>v_0=v_l<span class="math inline">\(则称\)</span>Γ <span class="math inline">\(为回路。若通路（回路）中所有顶点（对于回路，\)</span>v_0=v_l$）各异，称此通路<strong>初级通路（回路）</strong>；若通路中所有的边各异，则称为简单通路。初级通路是简单通路，反之不然。</p></li>
+<li><p><span class="math inline">\(Γ\)</span>的表示方法 ：用顶点和边交替序列、用边序列、简单图中用顶点序列。</p></li>
+<li><p>连通分支：设<span class="math inline">\(R\)</span>是<span class="math inline">\(G\)</span>中顶点之间的连通关系，按<span class="math inline">\(R\)</span>可将<span class="math inline">\(V(G)\)</span>划分为<span class="math inline">\(k\)</span>个等价类，记作<span class="math inline">\(V_1,V_2,...,V_k\)</span>，由他们的导出子图<span class="math inline">\(G[V_1],G[V_2],...,G[V_k]\)</span>称为<span class="math inline">\(G\)</span>的连通分支。令<span class="math inline">\(p(G)=k\)</span>表示<span class="math inline">\(G\)</span>的连通分支数为<span class="math inline">\(k\)</span>。</p></li>
+<li><p>点割集与边割集：若<span class="math inline">\(V&#39; \subset V\)</span>，<span class="math inline">\(p(V-V&#39;)&gt;p(V)\)</span>，且<span class="math inline">\(\forall V&#39;&#39; \subset V\)</span>，<span class="math inline">\(p(V-V&#39;&#39;) = V\)</span>，则称<span class="math inline">\(V&#39;\)</span>为<span class="math inline">\(G\)</span>的点割集，若点割集只有一个点，则称此顶点为割点；同理可以得到边割集的定义，若边割集只有一条边则称此边为割边或桥。</p></li>
+<li><p>点连通度和边连通度：记<span class="math inline">\(min\{|V&#39;| \space | V&#39;\)</span>是<span class="math inline">\(G\)</span>的点割集<span class="math inline">\(\}=\kappa(G)\)</span>，称为<span class="math inline">\(G\)</span>的点连通度；记<span class="math inline">\(min\{|E&#39;| \space|E&#39;\)</span>是<span class="math inline">\(G\)</span>的边割集<span class="math inline">\(\} = \lambda(G)\)</span>，称为<span class="math inline">\(G\)</span>的边连通度。对于任意的无向图有<span class="math inline">\(\kappa(G)\leq \lambda(G)\leq \delta(G)\)</span> 。</p></li>
+<li><p>二部图判别定理：无向图<span class="math inline">\(G=\langle V,E\rangle\)</span>是二部图当且仅当<span class="math inline">\(G\)</span>中无奇数长度的回路，记作<span class="math inline">\(\langle V_1,V_2,E\rangle\)</span>。二部图还有一个非常重要的匹配问题，匹配就是<span class="math inline">\(E&#39; \subseteq E\)</span>，且<span class="math inline">\(E&#39;\)</span>中的边互补相邻，注意极大匹配，最大匹配，完备匹配，完美匹配等问题。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/01/22/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0/#more" rel="contents">
@@ -862,12 +853,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">35k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">32 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
@@ -949,6 +940,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
