@@ -20,42 +20,42 @@
 <p>Darkmode.js is very easy to use, just copy-paste the following code or use the npm package.</p>
 <h3 id="easy-way-using-the-jsdelivr-cdn">🚀 Easy way (using the JSDelivr CDN)</h3>
 <p>Just add this code to your HTML page:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">&lt;script&gt;</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="kw">function</span> <span class="at">addDarkmodeWidget</span>() <span class="op">{</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">    <span class="kw">new</span> <span class="at">Darkmode</span>().<span class="at">showWidget</span>()<span class="op">;</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="op">}</span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="va">window</span>.<span class="at">addEventListener</span>(<span class="st">&#39;load&#39;</span><span class="op">,</span> addDarkmodeWidget)<span class="op">;</span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">&lt;/script&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">addDarkmodeWidget</span>() {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="fu">Darkmode</span>()<span class="op">.</span><span class="fu">showWidget</span>()<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;load&#39;</span><span class="op">,</span> addDarkmodeWidget)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
 <h3 id="using-npm">📦 Using NPM</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">npm</span> install darkmode-js</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install darkmode-js</span></code></pre></div>
 <p>Then add the following JavaScript code:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="im">import</span> Darkmode <span class="im">from</span> <span class="st">&#39;darkmode-js&#39;</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">new</span> <span class="at">Darkmode</span>().<span class="at">showWidget</span>()<span class="op">;</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> Darkmode <span class="im">from</span> <span class="st">&#39;darkmode-js&#39;</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="fu">Darkmode</span>()<span class="op">.</span><span class="fu">showWidget</span>()<span class="op">;</span></span></code></pre></div>
 <h2 id="options">⚙️ Options</h2>
 <p>Here are the option availables:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">const</span> options <span class="op">=</span> <span class="op">{</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">bottom</span><span class="op">:</span> <span class="st">&#39;64px&#39;</span><span class="op">,</span> <span class="co">// default: &#39;32px&#39;</span></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">right</span><span class="op">:</span> <span class="st">&#39;unset&#39;</span><span class="op">,</span> <span class="co">// default: &#39;32px&#39;</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">  <span class="dt">left</span><span class="op">:</span> <span class="st">&#39;32px&#39;</span><span class="op">,</span> <span class="co">// default: &#39;unset&#39;</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">  <span class="dt">time</span><span class="op">:</span> <span class="st">&#39;0.5s&#39;</span><span class="op">,</span> <span class="co">// default: &#39;0.3s&#39;</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">  <span class="dt">mixColor</span><span class="op">:</span> <span class="st">&#39;#fff&#39;</span><span class="op">,</span> <span class="co">// default: &#39;#fff&#39;</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">  <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">&#39;#fff&#39;</span><span class="op">,</span>  <span class="co">// default: &#39;#fff&#39;</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">  <span class="dt">buttonColorDark</span><span class="op">:</span> <span class="st">&#39;#100f2c&#39;</span><span class="op">,</span>  <span class="co">// default: &#39;#100f2c&#39;</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">  <span class="dt">buttonColorLight</span><span class="op">:</span> <span class="st">&#39;#fff&#39;</span><span class="op">,</span> <span class="co">// default: &#39;#fff&#39;</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10">  <span class="dt">saveInCookies</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span> <span class="co">// default: true,</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11">  <span class="dt">label</span><span class="op">:</span> <span class="st">&#39;🌓&#39;</span><span class="op">,</span> <span class="co">// default: &#39;&#39;</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12">  <span class="dt">autoMatchOsTheme</span><span class="op">:</span> <span class="kw">true</span> <span class="co">// default: true</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="op">}</span></a>
-<a class="sourceLine" id="cb4-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="kw">const</span> darkmode <span class="op">=</span> <span class="kw">new</span> <span class="at">Darkmode</span>(options)<span class="op">;</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="va">darkmode</span>.<span class="at">showWidget</span>()<span class="op">;</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> options <span class="op">=</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">bottom</span><span class="op">:</span> <span class="st">&#39;64px&#39;</span><span class="op">,</span> <span class="co">// default: &#39;32px&#39;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">right</span><span class="op">:</span> <span class="st">&#39;unset&#39;</span><span class="op">,</span> <span class="co">// default: &#39;32px&#39;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">left</span><span class="op">:</span> <span class="st">&#39;32px&#39;</span><span class="op">,</span> <span class="co">// default: &#39;unset&#39;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">time</span><span class="op">:</span> <span class="st">&#39;0.5s&#39;</span><span class="op">,</span> <span class="co">// default: &#39;0.3s&#39;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">mixColor</span><span class="op">:</span> <span class="st">&#39;#fff&#39;</span><span class="op">,</span> <span class="co">// default: &#39;#fff&#39;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">&#39;#fff&#39;</span><span class="op">,</span>  <span class="co">// default: &#39;#fff&#39;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">buttonColorDark</span><span class="op">:</span> <span class="st">&#39;#100f2c&#39;</span><span class="op">,</span>  <span class="co">// default: &#39;#100f2c&#39;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">buttonColorLight</span><span class="op">:</span> <span class="st">&#39;#fff&#39;</span><span class="op">,</span> <span class="co">// default: &#39;#fff&#39;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">saveInCookies</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span> <span class="co">// default: true,</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">&#39;🌓&#39;</span><span class="op">,</span> <span class="co">// default: &#39;&#39;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">autoMatchOsTheme</span><span class="op">:</span> <span class="kw">true</span> <span class="co">// default: true</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> darkmode <span class="op">=</span> <span class="kw">new</span> <span class="fu">Darkmode</span>(options)<span class="op">;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>darkmode<span class="op">.</span><span class="fu">showWidget</span>()<span class="op">;</span></span></code></pre></div>
 <h2 id="methods">▶️ Methods</h2>
 <p>If you don't want to show the widget and enable/disable Darkmode programatically you can use the method <code>toggle()</code>. You can also check if the Dark Mode is activated with the method <code>isActivated()</code>. See them in action in the following example:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">const</span> darkmode <span class="op">=</span>  <span class="kw">new</span> <span class="at">Darkmode</span>()<span class="op">;</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="va">darkmode</span>.<span class="at">toggle</span>()<span class="op">;</span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="va">console</span>.<span class="at">log</span>(<span class="va">darkmode</span>.<span class="at">isActivated</span>()) <span class="co">// will return true</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> darkmode <span class="op">=</span>  <span class="kw">new</span> <span class="fu">Darkmode</span>()<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>darkmode<span class="op">.</span><span class="fu">toggle</span>()<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(darkmode<span class="op">.</span><span class="fu">isActivated</span>()) <span class="co">// will return true</span></span></code></pre></div>
 <h2 id="override-style">Override style</h2>
 <ul>
 <li>A CSS class <code>darkmode--activated</code> is added to the body tag when the darkmode is activated. You can take advantage of it to override the style and have a custom style</li>
@@ -64,23 +64,23 @@
 <li>It is also possible to revert the Dark Mode with this style <code>mix-blend-mode: difference;</code></li>
 </ul>
 <h3 id="examples">Examples</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="fu">.darkmode--activated</span> p, <span class="fu">.darkmode--activated</span> li {</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="kw">color</span>: <span class="dv">#000</span>;</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="fu">.button</span> {</a>
-<a class="sourceLine" id="cb6-6" data-line-number="6">  <span class="kw">isolation</span>: isolate;</a>
-<a class="sourceLine" id="cb6-7" data-line-number="7">}</a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="fu">.darkmode--activated</span> <span class="fu">.logo</span> {</a>
-<a class="sourceLine" id="cb6-10" data-line-number="10">  <span class="kw">mix-blend-mode</span>: difference;</a>
-<a class="sourceLine" id="cb6-11" data-line-number="11">}</a></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;darkmode-ignore&quot;</span><span class="kw">&gt;</span>😬<span class="kw">&lt;span&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.darkmode--activated</span> p<span class="op">,</span> <span class="fu">.darkmode--activated</span> li {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#000</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.button</span> {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">isolation</span>: isolate<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">.darkmode--activated</span> <span class="fu">.logo</span> {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">mix-blend-mode</span>: difference<span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;span</span><span class="ot"> class=</span><span class="st">&quot;darkmode-ignore&quot;</span><span class="kw">&gt;</span>😬<span class="kw">&lt;span&gt;</span></span></code></pre></div>
 <h2 id="debug">Debug</h2>
 <p>If it does not work you may have to add the following code, but this will invalidate the classes to override.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="fu">.darkmode-layer</span>, <span class="fu">.darkmode-toggle</span> {</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">  <span class="kw">z-index</span>: <span class="dv">500</span>;</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">}</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.darkmode-layer</span><span class="op">,</span> <span class="fu">.darkmode-toggle</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">z-index</span>: <span class="dv">500</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h2 id="browser-compatibility">Browser compatibility</h2>
 <p>This library uses the CSS <code>mix-blend-mode: difference;</code> to provide the Dark Mode. It may not be compatible with all the browsers. Therefore the widget has been hidden in Internet Explorer and Edge. This library also uses <code>prefers-color-scheme: dark</code> to automatically enable the Dark Mode if the OS prefered theme is dark.</p>
 <p>Check the compatibility here: - https://caniuse.com/#search=mix-blend-mode - https://caniuse.com/#search=prefers-color-scheme (to activate Dark Mode automatically)</p>
