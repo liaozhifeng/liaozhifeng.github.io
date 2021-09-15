@@ -1029,6 +1029,7 @@ pre .javascript .function {
   line-height: 1.375em;
   padding: 0 40px;
   position: relative;
+  border-radius: 4px;
 }
 .brand:hover {
   color: var(--brand-hover-color);
@@ -1214,7 +1215,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff01ff;
+  background: #a783cd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
