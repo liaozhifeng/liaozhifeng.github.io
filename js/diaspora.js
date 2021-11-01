@@ -244,6 +244,7 @@ $(function() {
                 $('html, body').removeClass('loading')
             }, 1000)
             $('#mark').parallax()
+						cover.t[0].setAttribute('crossOrigin', 'anonymous')
             var vibrant = new Vibrant(cover.t[0]);
             var swatches = vibrant.swatches()
             if (swatches['DarkVibrant']) {
