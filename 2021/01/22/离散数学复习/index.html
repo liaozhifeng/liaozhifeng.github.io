@@ -1,150 +1,782 @@
 
+
 <!DOCTYPE html>
-<html lang="zh-CN" class="loading">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>离散数学复习 - xinyu</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="不断前进才能做更多喜欢的事,图论
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/bg/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="xinyu">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="图论 零图：$E &#x3D; ∅$，即只有顶点，没有边的图。  平凡图：只有一个顶点（也称$1$阶图）的零图。  悬挂顶点：度数为$1$的顶点；悬挂边：与悬挂顶点关联的边。  在无向图中，图的最大度：$∆(G)&#x3D;{d(v)|v\in V}$，其中$V$表示顶点集，$d(v)$表示顶点的度数，记住用$\Delta(G)$去表示最大度；同理图的最小度的定义易得，注意的是我们用$\delta(G)$表示图的最小">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离散数学复习">
+<meta property="og:url" content="http://liaozhifeng.gitee.io/2021/01/22/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="xinyu">
+<meta property="og:description" content="图论 零图：$E &#x3D; ∅$，即只有顶点，没有边的图。  平凡图：只有一个顶点（也称$1$阶图）的零图。  悬挂顶点：度数为$1$的顶点；悬挂边：与悬挂顶点关联的边。  在无向图中，图的最大度：$∆(G)&#x3D;{d(v)|v\in V}$，其中$V$表示顶点集，$d(v)$表示顶点的度数，记住用$\Delta(G)$去表示最大度；同理图的最小度的定义易得，注意的是我们用$\delta(G)$表示图的最小">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-22T06:32:56.000Z">
+<meta property="article:modified_time" content="2021-01-24T05:19:24.050Z">
+<meta property="article:author" content="xinyu">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>离散数学复习 - xinyu</title>
 
-零图：\(E = ∅\)，即只有顶点，没有边的图。
-平凡图：只有一个顶点（也称\(1\)阶图）的零图。
-悬挂顶点：度数为\(1\)的顶点；悬挂边：与悬挂顶点关联的边。
-在无向图中，,"> 
-    <meta name="author" content="xinyu"> 
-    <link rel="alternative" href="atom.xml" title="xinyu" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"liaozhifeng.gitee.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="xinyu" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
     
-    
-<link rel="stylesheet" href="/css/diaspora.css">
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>xinyu&#39;s Blog</strong>
+    </a>
 
-<body class="loading">
-    <span id="config-title" style="display:none">xinyu</span>
-    <div id="loader"></div>
-    <div id="single">
-    <div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://liaozhifeng.gitee.io"></a>
-    <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">离散数学复习</h3>
-    <div class="social">
-        <div>
-            <div class="share">
-                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
-            </div>
-            <div id="qr"></div>
-        </div>
-    </div>
-    <div class="scrollbar"></div>
-</div>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-    <div class="section">
-        <div class="article">
-    <div class='main'>
-        <h1 class="title">离散数学复习</h1>
-        <div class="stuff">
-            <span>一月 22, 2021</span>
-            
-
-        </div>
-        <div class="content markdown">
-            <h3 id="图论">图论</h3>
-<ul>
-<li><p>零图：<span class="math inline">\(E = ∅\)</span>，即只有顶点，没有边的图。</p></li>
-<li><p>平凡图：只有一个顶点（也称<span class="math inline">\(1\)</span>阶图）的零图。</p></li>
-<li><p>悬挂顶点：度数为<span class="math inline">\(1\)</span>的顶点；悬挂边：与悬挂顶点关联的边。</p></li>
-<li><p>在无向图中，图的最大度：<span class="math inline">\(∆(G)={d(v)|v\in V}\)</span>，其中<span class="math inline">\(V\)</span>表示顶点集，<span class="math inline">\(d(v)\)</span>表示顶点的度数，记住用<span class="math inline">\(\Delta(G)\)</span>去表示最大度；同理图的最小度的定义易得，注意的是我们用<span class="math inline">\(\delta(G)\)</span>表示图的最小度。另外无向图用<span class="math inline">\((v_n,v_m)\)</span>表示边。</p></li>
-<li><p>在有向图中，<span class="math inline">\(v\)</span>的入度<span class="math inline">\(d^+(v)\)</span>，<span class="math inline">\(v\)</span>的出度<span class="math inline">\(d^-(v)\)</span>，<span class="math inline">\(v\)</span>的度数<span class="math inline">\(d(v) = d^+(v)+d^-(v)\)</span>，同时有向图还定义了出度、入度的最大度和最小度。有向图用<span class="math inline">\(\langle v_n,v_m \rangle\)</span>表示边。</p></li>
-<li><p>握手定理：图的所有顶点的度数之和等于边数的<span class="math inline">\(2\)</span>倍，因为每条边都提供<span class="math inline">\(2\)</span>度，所以度数之和一定是偶数。</p></li>
-<li><p>度数列：<span class="math inline">\(V=\{v_1,v_2,...v_n\}\)</span>，<span class="math inline">\(G\)</span>的度数列：<span class="math inline">\(d(v_1),d(v_2),...,d(v_n)\)</span>。</p></li>
-<li><p>简单图：既无平行边也无环的图称为简单图。其中平行边的条数称为重数。</p></li>
-<li><p>完全图和正则图：无向完全图，记作<span class="math inline">\(K_n\)</span>，边数为<span class="math inline">\(n(n-1)/2\)</span>，有向完全图，边数为<span class="math inline">\(n(n-1)\)</span>；<span class="math inline">\(k-\)</span>正则图：每个顶点的度数均为<span class="math inline">\(k\)</span>的无向简单图。</p></li>
-<li><p>子图：生成子图：<span class="math inline">\(V&#39; = V\)</span>且<span class="math inline">\(G&#39;\subseteq G\)</span>；<span class="math inline">\(V&#39;\)</span>的导出子图，以两端点都在<span class="math inline">\(V&#39;\)</span>中所有的边集的子图，记作<span class="math inline">\(G[V&#39;]\)</span>；<span class="math inline">\(E&#39;\)</span>的导出子图：以<span class="math inline">\(E&#39;\)</span>所以关联的顶点为顶点集的子图，记作<span class="math inline">\(G[E&#39;]\)</span>。</p></li>
-<li><p>通路：<span class="math inline">\(Γ = v_0e_1v_1e_2...e_lv_l\)</span> ，称<span class="math inline">\(Γ\)</span>为<span class="math inline">\(v_0\)</span>到<span class="math inline">\(v_l\)</span>的通路，<span class="math inline">\(l\)</span>为通路的长度，若<span class="math inline">\(v_0=v_l\)</span>则称$Γ <span class="math inline">\(为回路。若通路（回路）中所有顶点（对于回路，\)</span>v_0=v_l$）各异，称此通路<strong>初级通路（回路）</strong>；若通路中所有的边各异，则称为简单通路。初级通路是简单通路，反之不然。</p></li>
-<li><p><span class="math inline">\(Γ\)</span>的表示方法 ：用顶点和边交替序列、用边序列、简单图中用顶点序列。</p></li>
-<li><p>连通分支：设<span class="math inline">\(R\)</span>是<span class="math inline">\(G\)</span>中顶点之间的连通关系，按<span class="math inline">\(R\)</span>可将<span class="math inline">\(V(G)\)</span>划分为<span class="math inline">\(k\)</span>个等价类，记作<span class="math inline">\(V_1,V_2,...,V_k\)</span>，由他们的导出子图<span class="math inline">\(G[V_1],G[V_2],...,G[V_k]\)</span>称为<span class="math inline">\(G\)</span>的连通分支。令<span class="math inline">\(p(G)=k\)</span>表示<span class="math inline">\(G\)</span>的连通分支数为<span class="math inline">\(k\)</span>。</p></li>
-<li><p>点割集与边割集：若<span class="math inline">\(V&#39; \subset V\)</span>，<span class="math inline">\(p(V-V&#39;)&gt;p(V)\)</span>，且<span class="math inline">\(\forall V&#39;&#39; \subset V\)</span>，<span class="math inline">\(p(V-V&#39;&#39;) = V\)</span>，则称<span class="math inline">\(V&#39;\)</span>为<span class="math inline">\(G\)</span>的点割集，若点割集只有一个点，则称此顶点为割点；同理可以得到边割集的定义，若边割集只有一条边则称此边为割边或桥。</p></li>
-<li><p>点连通度和边连通度：记<span class="math inline">\(min\{|V&#39;| \space | V&#39;\)</span>是<span class="math inline">\(G\)</span>的点割集<span class="math inline">\(\}=\kappa(G)\)</span>，称为<span class="math inline">\(G\)</span>的点连通度；记<span class="math inline">\(min\{|E&#39;| \space|E&#39;\)</span>是<span class="math inline">\(G\)</span>的边割集<span class="math inline">\(\} = \lambda(G)\)</span>，称为<span class="math inline">\(G\)</span>的边连通度。对于任意的无向图有<span class="math inline">\(\kappa(G)\leq \lambda(G)\leq \delta(G)\)</span> 。</p></li>
-<li><p>二部图判别定理：无向图<span class="math inline">\(G=\langle V,E\rangle\)</span>是二部图当且仅当<span class="math inline">\(G\)</span>中无奇数长度的回路，记作<span class="math inline">\(\langle V_1,V_2,E\rangle\)</span>。二部图还有一个非常重要的匹配问题，匹配就是<span class="math inline">\(E&#39; \subseteq E\)</span>，且<span class="math inline">\(E&#39;\)</span>中的边互补相邻，注意极大匹配，最大匹配，完备匹配，完美匹配等问题。</p>
-<a id="more"></a></li>
-<li><p>完备匹配判定定理$(|V_1||V_2|) <span class="math inline">\(：(Hall定理)，存在\)</span>V_1,V_2<span class="math inline">\(的完备匹配当且仅当\)</span>V_1<span class="math inline">\(中任意\)</span>k(1k|V_1|)<span class="math inline">\(个顶点至少与\)</span>V_2<span class="math inline">\(中\)</span>k<span class="math inline">\(个顶点相邻；（t条件）：如果存在正整数\)</span>t<span class="math inline">\(，使得\)</span>V_1<span class="math inline">\(中每个顶点至少关联\)</span>t<span class="math inline">\(条边，而\)</span>V_2<span class="math inline">\(中的顶点至多关联\)</span>t<span class="math inline">\(条边，则\)</span>G<span class="math inline">\(中存在\)</span>V_1<span class="math inline">\(到\)</span>V_2$的完备匹配。</p></li>
-<li><p>无向图关联矩阵：<span class="math inline">\(m_{ij}\)</span>为<span class="math inline">\(v_i\)</span>与<span class="math inline">\(e_j\)</span>的关联次数；无环有向图关联矩阵：<span class="math inline">\(m_{ij}=-1,0,1\)</span>，<span class="math inline">\(1\)</span>代表是起点，<span class="math inline">\(-1\)</span>代表是终点；关联矩阵记为<span class="math inline">\(M\)</span>。 有向图的邻接矩阵：<span class="math inline">\(a_{i,j}\)</span>为以<span class="math inline">\(v_i\)</span>为起点，<span class="math inline">\(v_j\)</span>为终点的边的条数，记为<span class="math inline">\(A\)</span>。<span class="math inline">\(A^l\)</span>中元素表示长度为<span class="math inline">\(l\)</span>的边的条数。 可达矩阵：<span class="math inline">\(p_{ij} = 0,1\)</span>，<span class="math inline">\(1\)</span>表示可达。</p></li>
-<li><p>欧拉通路：经过所有顶点且每条边恰好且经过一次的通路。无向图具有欧拉回路当且仅当<span class="math inline">\(G\)</span>是连通的且无奇度顶点，无向图具有欧拉通路当且仅当图是连通的且只有两个奇度顶点。有向图具有欧拉回路当且仅当<span class="math inline">\(G\)</span>是连通的且每个顶点的出度等于入度，具有欧拉通路当且图中有一个顶点<span class="math inline">\(d^--d^+ = 1\)</span>，有一个顶点<span class="math inline">\(d^+-d^-=1\)</span>，其他顶点的出度等于入度。</p></li>
-<li><p>哈密顿通路：经过图中所有顶点一次且仅一次的通路。 必要条件：若无向图是哈密顿图，则对于<span class="math inline">\(V\)</span>的任意非空真子集<span class="math inline">\(V&#39;\)</span>，均有<span class="math inline">\(p(V-V&#39;)&lt;|V&#39;|\)</span>,推论，有割点的图不是哈密顿图。 充分条件：若<span class="math inline">\(G\)</span>是<span class="math inline">\(n\)</span>阶无向图，<span class="math inline">\(d(u)+d(v)\geq n-1\)</span>，<span class="math inline">\(u,v\)</span>为<span class="math inline">\(G\)</span>中任意不相邻点，则<span class="math inline">\(G\)</span>中存在哈密顿通路；若<span class="math inline">\(d(u)+d(v)\geq n\)</span>则<span class="math inline">\(G\)</span>中存在哈密顿回路。</p></li>
-<li><p>基本回路系统：设<span class="math inline">\(T\)</span>是<span class="math inline">\(n\)</span>阶<span class="math inline">\(m\)</span>条边的无向连通图<span class="math inline">\(G\)</span>的一棵生成树，设<span class="math inline">\(e_1,e_2,...,e_{n-m+1}\)</span>为<span class="math inline">\(T\)</span>的弦，<span class="math inline">\(C_r(r=1,2,...,m-n+1)\)</span>为<span class="math inline">\(T\)</span>添加弦<span class="math inline">\(e_r\)</span>产生的<span class="math inline">\(G\)</span>中由弦<span class="math inline">\(e_r\)</span>和树枝构成的圈，称<span class="math inline">\(C_r\)</span>为<span class="math inline">\(G\)</span>的对应弦<span class="math inline">\(e_r\)</span>基本回路或基本图，称<span class="math inline">\(\{C_1.C_2,...,C_{m-n+1}\}\)</span>为<span class="math inline">\(G\)</span>对应<span class="math inline">\(T\)</span>的基本回路系统，称<span class="math inline">\(m-n+1\)</span>为<span class="math inline">\(G\)</span>的圈秩，记作<span class="math inline">\(ξ(G)\)</span>。</p></li>
-<li><p>基本割集系统：设<span class="math inline">\(T\)</span>是<span class="math inline">\(n\)</span>阶的无向连通图<span class="math inline">\(G\)</span>的一棵生成树，设<span class="math inline">\(e_1,e_2,...,e_{n-1}\)</span>为<span class="math inline">\(T\)</span>的树枝，<span class="math inline">\(S_i(i=1,2,..,n-1)\)</span>为由树枝<span class="math inline">\(e_i\)</span>和弦构成的割集。称<span class="math inline">\(\{S_1,S_2,...,S_{n-1}\}\)</span>为<span class="math inline">\(G\)</span>对应<span class="math inline">\(T\)</span>的基本割集系统，称<span class="math inline">\(n-1\)</span>为<span class="math inline">\(G\)</span>的割集秩，记作<span class="math inline">\(η(G)\)</span>。</p></li>
-<li><p>平面图与平面嵌入：如果能将图<span class="math inline">\(G\)</span>中除顶点外边不相交地画在平面上，则称<span class="math inline">\(G\)</span>是平面图，由这个图画出的无边相交的图称为<span class="math inline">\(G\)</span>的平面嵌入，没有平面嵌入的图称为非平面图。</p></li>
-<li><p>平面图的一些概念：无限面，用<span class="math inline">\(R_0\)</span>表示，有限面，用<span class="math inline">\(R_1, R_2, ..., R_k\)</span>表示，面<span class="math inline">\(R_i\)</span>的次数，<span class="math inline">\(R\)</span>边界的长度，用<span class="math inline">\(deg(R_i)\)</span>表示。 平面图各面的次数之和等于边数的<span class="math inline">\(2\)</span>倍，一条边或者是<span class="math inline">\(2\)</span>个面的公共边界，或者在一个面中出现两次，特别要注意的是这种出现两次的情况，这种边应该只会在无限面中出现，所以在写无限面的边界时也应该注意，这条边要写两次。</p></li>
-<li><p>极大平面图：在简单平面中任意不相邻的顶点之间加一条新边所得的图为非平面图。极大平面是连通的，且设<span class="math inline">\(G\)</span>为<span class="math inline">\(n(\geq3)\)</span>阶简单平面图，<span class="math inline">\(G\)</span>为极大平面图的充分必要条件是，<span class="math inline">\(G\)</span>的每个面次数均为<span class="math inline">\(3\)</span>。</p></li>
-<li><p>欧拉公式：设<span class="math inline">\(G\)</span>为<span class="math inline">\(n\)</span>阶<span class="math inline">\(m\)</span>条边<span class="math inline">\(r\)</span>个面的连通平面图，则<span class="math inline">\(n-m+r=2\)</span>。 欧拉公式的推论：设平面<span class="math inline">\(G\)</span>中有<span class="math inline">\(p(p\geq 2)\)</span>连通分支，则<span class="math inline">\(n-m+r=p+1\)</span></p></li>
-<li><p>同胚与收缩：<span class="math inline">\(G_1\)</span>与<span class="math inline">\(G_2\)</span>同构，或经过反复插入或消去<span class="math inline">\(2\)</span>度顶点后，称为同胚。收缩边称为收缩。 库拉图斯基定理：一个图是平面图当且仅当它既不包含与<span class="math inline">\(K_5\)</span>同胚的<strong>子图</strong>，也不含与<span class="math inline">\(K_{3,3}\)</span>同胚的子图，一个图是平面图当且仅当它既无可收缩为<span class="math inline">\(K_5\)</span>的子图，也无可收缩为<span class="math inline">\(K_{3,3}\)</span>的子图。</p></li>
-<li><p>对偶图的性质：设<span class="math inline">\(G^*\)</span>是连通图<span class="math inline">\(G\)</span>的对偶图，<span class="math inline">\(n^*,m^*,r^*\)</span>和<span class="math inline">\(n,m,r\)</span>分别为<span class="math inline">\(G^*,G\)</span>的顶点数，边数，面数，有<span class="math inline">\(n^*=r,m*=m,r^*=n\)</span>，设<span class="math inline">\(G^*\)</span>的顶点<span class="math inline">\(v^*_i\)</span>位于<span class="math inline">\(G\)</span>的面<span class="math inline">\(R_i\)</span>中，则<span class="math inline">\(d(v^*_i)=deg(R_i)\)</span>。</p></li>
-</ul>
-<h3 id="代数结构">代数结构</h3>
-<ul>
-<li>积代数：设<span class="math inline">\(V_1 = \langle S_1, \circ \rangle, V_2 =\langle S_2, *\rangle\)</span>，<span class="math inline">\(V_1\)</span>与<span class="math inline">\(V_2\)</span>的积代数<span class="math inline">\(V=\langle S_1\times S_2,\cdot\rangle\)</span>，<span class="math inline">\(\langle x_1, y_1 \rangle,\langle x_2,y_2\rangle \in S_1\times S_2\)</span>。<span class="math inline">\(\langle x_1, y_1 \rangle\cdot \langle x_2,y_2\rangle\)</span> <span class="math inline">\(=&lt;x_1\circ x_2, y_1*y_2&gt;\)</span>。</li>
-<li>设<span class="math inline">\(G=&lt;a&gt;\)</span>是<span class="math inline">\(n\)</span>阶循环群，则对<span class="math inline">\(n\)</span>的每个正因子<span class="math inline">\(d\)</span>，<span class="math inline">\(G\)</span>恰好有一个<span class="math inline">\(d\)</span>阶的子群。</li>
-<li>设<span class="math inline">\(G=&lt;a&gt;\)</span>是循环群，若<span class="math inline">\(G\)</span>是无限循环群，则<span class="math inline">\(G\)</span>只有两个生成元，即<span class="math inline">\(a\)</span>和<span class="math inline">\(a^{-1}\)</span>。若<span class="math inline">\(G\)</span>是<span class="math inline">\(n\)</span>阶循环群，则<span class="math inline">\(G\)</span>有<span class="math inline">\(\phi(n)\)</span>个生成元，对于任意小于<span class="math inline">\(n\)</span>且与<span class="math inline">\(n\)</span>互素的自然数<span class="math inline">\(r\)</span>，<span class="math inline">\(a^r\)</span>是<span class="math inline">\(G\)</span>的生成元。</li>
-<li>子环判别定理：设<span class="math inline">\(R\)</span>是环，<span class="math inline">\(S\)</span>是<span class="math inline">\(R\)</span>得非空子集，若<span class="math inline">\(\forall a, b \in S\)</span>，<span class="math inline">\(a-b\in S\)</span>且<span class="math inline">\(\forall a,b \in S，ab\in S\)</span>，则<span class="math inline">\(S\)</span>是<span class="math inline">\(R\)</span>的子环。</li>
-<li>如果<span class="math inline">\(R\)</span>既是交换环、含幺环、无零因子环，则称<span class="math inline">\(R\)</span>是整环。</li>
-<li>域：若<span class="math inline">\(R\)</span>是整环，则对<span class="math inline">\(R\)</span>中的每个元素(<span class="math inline">\(\{0\}\)</span>除外)，都有逆元，则称<span class="math inline">\(R\)</span>是域。</li>
-<li>格的定义：利用偏序集<span class="math inline">\(\langle S, \preccurlyeq \rangle\)</span>，如果<span class="math inline">\(\forall x, y \in S, \{x,y\}\)</span>都有最小上界和最大下界，则称<span class="math inline">\(S\)</span>关于偏序<span class="math inline">\(\preccurlyeq\)</span>做出一个格。<span class="math inline">\(x\)</span>和<span class="math inline">\(y\)</span>有<span class="math inline">\(\vee, \wedge\)</span>两个运算，其中<span class="math inline">\(\vee\)</span>表示最小上界，<span class="math inline">\(\wedge\)</span>表示最大下届。其中运算<span class="math inline">\(\vee, \wedge\)</span>还要满足交换律，结合律，幂等律，吸收律<span class="math inline">\(a(a\vee b) = a,a(a\wedge b)=a\)</span>。</li>
-<li>格的等价定义：设<span class="math inline">\(\langle L,*,\cdot \rangle\)</span>是具有两个二元运算的代数系统，如果<span class="math inline">\(*,\cdot\)</span>满足交换律，结合律，幂等律，吸收率，则称<span class="math inline">\(\langle L,*,\cdot \rangle\)</span>是格。</li>
-<li>判断一个偏序集是否构成格：可以判断每两个元素的最小上界跟最大下界是否唯一，如果不唯一则不构成格。</li>
-<li>分配格：<span class="math inline">\(L\)</span>是分配格当且仅当<span class="math inline">\(L\)</span>不含与砖石格或者五角格同构的子格。或者当且仅当<span class="math inline">\(\forall a,b,c \in L\)</span>有<span class="math inline">\((a\vee b = a\vee c 且a\wedge b=a\wedge c)\)</span><span class="math inline">\(\rightarrow (b=c)\)</span>。特别的小于<span class="math inline">\(5\)</span>元的格，链都是分配格。</li>
-<li>设<span class="math inline">\(\langle L, \wedge,\vee,0,1\rangle\)</span>是有界格，<span class="math inline">\(a\in L\)</span>, 若存在<span class="math inline">\(b\in L\)</span>使得<span class="math inline">\(a\vee b =1\)</span>和<span class="math inline">\(a\wedge b=0\)</span>成立则称<span class="math inline">\(b\)</span>是<span class="math inline">\(a\)</span>的补元。若<span class="math inline">\(L\)</span>是有界分配格，则若<span class="math inline">\(L\)</span>中的元素存在补元，则只存在唯一的补元。若<span class="math inline">\(L\)</span>中所有的元素都存在补元，则称<span class="math inline">\(L\)</span>为有补格。</li>
-<li>如果一个格是有补分配格，则称它为布尔格或者布尔代数，记作<span class="math inline">\(\langle L, \wedge,\vee,0,1,&#39;\rangle\)</span>，任何有限布尔代数的元素的个数都是<span class="math inline">\(2^n\)</span>。有<span class="math inline">\((a&#39;)&#39;=a\)</span>，还有德摩根律。</li>
-</ul>
-
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='https://link.hhtjim.com/163/1862261759.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='https://link.hhtjim.com/163/1887766685.mp3'></li>
-                        
-                    
-                        
-                            <li title='2' data-url='https://link.hhtjim.com/163/1877939434.mp3'></li>
-                        
-                    
-                </ul>
-            
-        </div>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-    <div id='gitalk-container' class="comment link"
-		data-enable='false'
-        data-ae='false'
-        data-ci=''
-        data-cs=''
-        data-r=''
-        data-o=''
-        data-a=''
-        data-d='false'
-    >查看评论</div>
-
-
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg/head.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="离散数学复习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
     
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-01-22 14:32" pubdate>
+          2021年1月22日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          39 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
 </div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">离散数学复习</h1>
+            
+            <div class="markdown-body">
+              
+              <h3 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h3><ul>
+<li><p>零图：$E = ∅$，即只有顶点，没有边的图。</p>
+</li>
+<li><p>平凡图：只有一个顶点（也称$1$阶图）的零图。</p>
+</li>
+<li><p>悬挂顶点：度数为$1$的顶点；悬挂边：与悬挂顶点关联的边。</p>
+</li>
+<li><p>在无向图中，图的最大度：$∆(G)={d(v)|v\in V}$，其中$V$表示顶点集，$d(v)$表示顶点的度数，记住用$\Delta(G)$去表示最大度；同理图的最小度的定义易得，注意的是我们用$\delta(G)$表示图的最小度。另外无向图用$(v_n,v_m)$表示边。</p>
+</li>
+<li><p>在有向图中，$v$的入度$d^+(v)$，$v$的出度$d^-(v)$，$v$的度数$d(v) = d^+(v)+d^-(v)$，同时有向图还定义了出度、入度的最大度和最小度。有向图用$\langle v_n,v_m \rangle$表示边。</p>
+</li>
+<li><p>握手定理：图的所有顶点的度数之和等于边数的$2$倍，因为每条边都提供$2$度，所以度数之和一定是偶数。</p>
+</li>
+<li><p>度数列：$V={v_1,v_2,…v_n}$，$G$的度数列：$d(v_1),d(v_2),…,d(v_n)$。</p>
+</li>
+<li><p>简单图：既无平行边也无环的图称为简单图。其中平行边的条数称为重数。</p>
+</li>
+<li><p>完全图和正则图：无向完全图，记作$K_n$，边数为$n(n-1)/2$，有向完全图，边数为$n(n-1)$；$k-$正则图：每个顶点的度数均为$k$的无向简单图。</p>
+</li>
+<li><p>子图：生成子图：$V’ = V$且$G’\subseteq G$；$V’$的导出子图，以两端点都在$V’$中所有的边集的子图，记作$G[V’]$；$E’$的导出子图：以$E’$所以关联的顶点为顶点集的子图，记作$G[E’]$。</p>
+</li>
+<li><p>通路：$Γ = v_0e_1v_1e_2…e_lv_l$ ，称$Γ$为$v_0$到$v_l$的通路，$l$为通路的长度，若$v_0=v_l$则称$Γ $为回路。若通路（回路）中所有顶点（对于回路，$v_0=v_l$）各异，称此通路<strong>初级通路（回路）</strong>；若通路中所有的边各异，则称为简单通路。初级通路是简单通路，反之不然。</p>
+</li>
+<li><p>$Γ$的表示方法 ：用顶点和边交替序列、用边序列、简单图中用顶点序列。</p>
+</li>
+<li><p>连通分支：设$R$是$G$中顶点之间的连通关系，按$R$可将$V(G)$划分为$k$个等价类，记作$V_1,V_2,…,V_k$，由他们的导出子图$G[V_1],G[V_2],…,G[V_k]$称为$G$的连通分支。令$p(G)=k$表示$G$的连通分支数为$k$。</p>
+</li>
+<li><p>点割集与边割集：若$V’ \subset V$，$p(V-V’)&gt;p(V)$，且$\forall V’’ \subset V$，$p(V-V’’) = V$，则称$V’$为$G$的点割集，若点割集只有一个点，则称此顶点为割点；同理可以得到边割集的定义，若边割集只有一条边则称此边为割边或桥。</p>
+</li>
+<li><p>点连通度和边连通度：记$min{|V’| \space | V’$是$G$的点割集$}=\kappa(G)$，称为$G$的点连通度；记$min{|E’| \space|E’$是$G$的边割集$} = \lambda(G)$，称为$G$的边连通度。对于任意的无向图有$\kappa(G)\leq \lambda(G)\leq \delta(G)$ 。</p>
+</li>
+<li><p>二部图判别定理：无向图$G=\langle V,E\rangle$是二部图当且仅当$G$中无奇数长度的回路，记作$\langle V_1,V_2,E\rangle$。二部图还有一个非常重要的匹配问题，匹配就是$E’ \subseteq E$，且$E’$中的边互补相邻，注意极大匹配，最大匹配，完备匹配，完美匹配等问题。</p>
+<span id="more"></span>
+</li>
+<li><p>完备匹配判定定理$(|V_1|\leq|V_2|) $：(Hall定理)，存在$V_1,V_2$的完备匹配当且仅当$V_1$中任意$k(1\leq k\leq |V_1|)$个顶点至少与$V_2$中$k$个顶点相邻；（t条件）：如果存在正整数$t$，使得$V_1$中每个顶点至少关联$t$条边，而$V_2$中的顶点至多关联$t$条边，则$G$中存在$V_1$到$V_2$的完备匹配。</p>
+</li>
+<li><p>无向图关联矩阵：$m<em>{ij}$为$v_i$与$e_j$的关联次数；无环有向图关联矩阵：$m</em>{ij}=-1,0,1$，$1$代表是起点，$-1$代表是终点；关联矩阵记为$M$。<br>有向图的邻接矩阵：$a<em>{i,j}$为以$v_i$为起点，$v_j$为终点的边的条数，记为$A$。$A^l$中元素表示长度为$l$的边的条数。<br>可达矩阵：$p</em>{ij} = 0,1$，$1$表示可达。</p>
+</li>
+<li><p>欧拉通路：经过所有顶点且每条边恰好且经过一次的通路。无向图具有欧拉回路当且仅当$G$是连通的且无奇度顶点，无向图具有欧拉通路当且仅当图是连通的且只有两个奇度顶点。有向图具有欧拉回路当且仅当$G$是连通的且每个顶点的出度等于入度，具有欧拉通路当且图中有一个顶点$d^—d^+ = 1$，有一个顶点$d^+-d^-=1$，其他顶点的出度等于入度。</p>
+</li>
+<li><p>哈密顿通路：经过图中所有顶点一次且仅一次的通路。<br>必要条件：若无向图是哈密顿图，则对于$V$的任意非空真子集$V’$，均有$p(V-V’)&lt;|V’|$,推论，有割点的图不是哈密顿图。<br>充分条件：若$G$是$n$阶无向图，$d(u)+d(v)\geq n-1$，$u,v$为$G$中任意不相邻点，则$G$中存在哈密顿通路；若$d(u)+d(v)\geq n$则$G$中存在哈密顿回路。</p>
+</li>
+<li><p>基本回路系统：设$T$是$n$阶$m$条边的无向连通图$G$的一棵生成树，设$e<em>1,e_2,…,e</em>{n-m+1}$为$T$的弦，$C<em>r(r=1,2,…,m-n+1)$为$T$添加弦$e_r$产生的$G$中由弦$e_r$和树枝构成的圈，称$C_r$为$G$的对应弦$e_r$基本回路或基本图，称${C_1.C_2,…,C</em>{m-n+1}}$为$G$对应$T$的基本回路系统，称$m-n+1$为$G$的圈秩，记作$ξ(G)$。</p>
+</li>
+<li><p>基本割集系统：设$T$是$n$阶的无向连通图$G$的一棵生成树，设$e<em>1,e_2,…,e</em>{n-1}$为$T$的树枝，$S<em>i(i=1,2,..,n-1)$为由树枝$e_i$和弦构成的割集。称${S_1,S_2,…,S</em>{n-1}}$为$G$对应$T$的基本割集系统，称$n-1$为$G$的割集秩，记作$η(G)$。</p>
+</li>
+<li><p>平面图与平面嵌入：如果能将图$G$中除顶点外边不相交地画在平面上，则称$G$是平面图，由这个图画出的无边相交的图称为$G$的平面嵌入，没有平面嵌入的图称为非平面图。</p>
+</li>
+<li><p>平面图的一些概念：无限面，用$R_0$表示，有限面，用$R_1, R_2, …, R_k$表示，面$R_i$的次数，$R$边界的长度，用$deg(R_i)$表示。<br>平面图各面的次数之和等于边数的$2$倍，一条边或者是$2$个面的公共边界，或者在一个面中出现两次，特别要注意的是这种出现两次的情况，这种边应该只会在无限面中出现，所以在写无限面的边界时也应该注意，这条边要写两次。</p>
+</li>
+<li><p>极大平面图：在简单平面中任意不相邻的顶点之间加一条新边所得的图为非平面图。极大平面是连通的，且设$G$为$n(\geq3)$阶简单平面图，$G$为极大平面图的充分必要条件是，$G$的每个面次数均为$3$。</p>
+</li>
+<li><p>欧拉公式：设$G$为$n$阶$m$条边$r$个面的连通平面图，则$n-m+r=2$。<br>欧拉公式的推论：设平面$G$中有$p(p\geq 2)$连通分支，则$n-m+r=p+1$</p>
+</li>
+<li><p>同胚与收缩：$G<em>1$与$G_2$同构，或经过反复插入或消去$2$度顶点后，称为同胚。收缩边称为收缩。<br>库拉图斯基定理：一个图是平面图当且仅当它既不包含与$K_5$同胚的<strong>子图</strong>，也不含与$K</em>{3,3}$同胚的子图，一个图是平面图当且仅当它既无可收缩为$K<em>5$的子图，也无可收缩为$K</em>{3,3}$的子图。</p>
+</li>
+<li><p>对偶图的性质：设$G^<em>$是连通图$G$的对偶图，$n^</em>,m^<em>,r^</em>$和$n,m,r$分别为$G^<em>,G$的顶点数，边数，面数，有$n^</em>=r,m<em>=m,r^</em>=n$，设$G^<em>$的顶点$v^</em>_i$位于$G$的面$R_i$中，则$d(v^*_i)=deg(R_i)$。</p>
+</li>
+</ul>
+<h3 id="代数结构"><a href="#代数结构" class="headerlink" title="代数结构"></a>代数结构</h3><ul>
+<li>积代数：设$V_1 = \langle S_1, \circ \rangle, V_2 =\langle S_2, <em>\rangle$，$V_1$与$V_2$的积代数$V=\langle S_1\times S_2,\cdot\rangle$，$\langle x_1, y_1 \rangle,\langle x_2,y_2\rangle \in S_1\times S_2$。$\langle x_1, y_1 \rangle\cdot \langle x_2,y_2\rangle$<br>$=&lt;x_1\circ x_2, y_1</em>y_2&gt;$。</li>
+<li>设$G=<a>$是$n$阶循环群，则对$n$的每个正因子$d$，$G$恰好有一个$d$阶的子群。</li>
+<li>设$G=<a>$是循环群，若$G$是无限循环群，则$G$只有两个生成元，即$a$和$a^{-1}$。若$G$是$n$阶循环群，则$G$有$\phi(n)$个生成元，对于任意小于$n$且与$n$互素的自然数$r$，$a^r$是$G$的生成元。</li>
+<li>子环判别定理：设$R$是环，$S$是$R$得非空子集，若$\forall a, b \in S$，$a-b\in S$且$\forall a,b \in S，ab\in S$，则$S$是$R$的子环。</li>
+<li>如果$R$既是交换环、含幺环、无零因子环，则称$R$是整环。</li>
+<li>域：若$R$是整环，则对$R$中的每个元素(${0}$除外)，都有逆元，则称$R$是域。</li>
+<li>格的定义：利用偏序集$\langle S, \preccurlyeq \rangle$，如果$\forall x, y \in S, {x,y}$都有最小上界和最大下界，则称$S$关于偏序$\preccurlyeq$做出一个格。$x$和$y$有$\vee, \wedge$两个运算，其中$\vee$表示最小上界，$\wedge$表示最大下届。其中运算$\vee, \wedge$还要满足交换律，结合律，幂等律，吸收律$a(a\vee b) = a,a(a\wedge b)=a$。</li>
+<li>格的等价定义：设$\langle L,<em>,\cdot \rangle$是具有两个二元运算的代数系统，如果$</em>,\cdot$满足交换律，结合律，幂等律，吸收率，则称$\langle L,*,\cdot \rangle$是格。</li>
+<li>判断一个偏序集是否构成格：可以判断每两个元素的最小上界跟最大下界是否唯一，如果不唯一则不构成格。</li>
+<li>分配格：$L$是分配格当且仅当$L$不含与砖石格或者五角格同构的子格。或者当且仅当$\forall a,b,c \in L$有$(a\vee b = a\vee c 且a\wedge b=a\wedge c)$$\rightarrow (b=c)$。特别的小于$5$元的格，链都是分配格。</li>
+<li>设$\langle L, \wedge,\vee,0,1\rangle$是有界格，$a\in L$, 若存在$b\in L$使得$a\vee b =1$和$a\wedge b=0$成立则称$b$是$a$的补元。若$L$是有界分配格，则若$L$中的元素存在补元，则只存在唯一的补元。若$L$中所有的元素都存在补元，则称$L$为有补格。</li>
+<li>如果一个格是有补分配格，则称它为布尔格或者布尔代数，记作$\langle L, \wedge,\vee,0,1,’\rangle$，任何有限布尔代数的元素的个数都是$2^n$。有$(a’)’=a$，还有德摩根律。</li>
+</ul>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E5%AD%A6/" class="category-chain-item">数学</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>离散数学复习</div>
+      <div>http://liaozhifeng.gitee.io/2021/01/22/离散数学复习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>xinyu</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年1月22日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/15/csapp%E5%AE%9E%E9%AA%8C%E4%B8%80%E6%80%BB%E7%BB%93/" title="csapp实验一总结">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">csapp实验一总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/17/some-puzzles-in-these-day/" title="最近的一些事情与想法">
+                        <span class="hidden-mobile">最近的一些事情与想法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.16/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"bpu3rQXe1RTALAz8m2U2MFFs-gzGzoHsz","appKey":"RbHz1FJVpWvXLeoxefs21uU5","path":"window.location.pathname","placeholder":"Just go go","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
 
 
     </div>
+  </div>
 </div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
@@ -161,92 +793,4 @@
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-
-
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/typed.js"></script>
-<script src="/js/diaspora.js"></script>
-
-
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-
-
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    });
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-
-
 </html>
